@@ -49,5 +49,7 @@ $ docker logs <analysis-container-ID>
 you should see address where jupyter lab launched (like in attached photo), copy this address and paste it to browser 
 ![image](https://user-images.githubusercontent.com/57999119/139748912-07470ea9-6c23-4fd4-8804-7249c7b49a82.png)
 on left bar you should see listed folders, 
+
 ![image](https://user-images.githubusercontent.com/57999119/139749513-4053133f-95a3-45f1-95bc-96fed256f5af.png)
+
 go to the *notebooks* folder and open *analysis.ipynb* notebook.
