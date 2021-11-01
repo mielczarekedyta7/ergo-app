@@ -6,11 +6,46 @@ First image **my-mysql** is the image for the docker where we store the data. Wh
 
 Second image **my-python-app** is docker image for making analyzes. The main purpose is to **launch the jupyter lab and connect to database in previous docker.**
 
+
+
 # How to open app
 
 ### First step
-After cloning repository go to data folder
+After cloning repository go to \data folder
 
 ```
 $ cd data/
 ```
+pull docker image 
+
+```
+$ docker pull emielcza/ergo-app:my-mysql
+```
+and run docker  
+```
+$ bash run_docker_mysql.sh
+```
+
+### Second step
+Go to \analysis folder
+
+```
+$ cd ../analysis/
+```
+pull docker image 
+
+```
+$ docker pull emielcza/ergo-app:my-python-app
+```
+and run docker  
+```
+$ bash run_docker_analysis.sh
+```
+After that run logs for this container
+
+```
+$ docker logs <analysis-container-ID>
+```
+you should see address where jupyter lab launched (like in attached photo), copy this address and paste it to browser 
+![image](https://user-images.githubusercontent.com/57999119/139748912-07470ea9-6c23-4fd4-8804-7249c7b49a82.png)
+on left bar you should see listed folders, go to the *notebooks* folder and open *analysis.ipynb* notebook.
